@@ -7,6 +7,7 @@
 , colord
 , colord-gtk4
 , cups
+, dbus
 , docbook-xsl-nons
 , fontconfig
 , gdk-pixbuf
@@ -38,6 +39,7 @@
 , libsecret
 , libsoup_3
 , libwacom
+, libXi
 , libxml2
 , libxslt
 , meson
@@ -102,7 +104,7 @@ stdenv.mkDerivation (finalAttrs: {
     adwaita-icon-theme
     colord
     colord-gtk4
-    libepoxy
+    cups
     fontconfig
     gdk-pixbuf
     glib
@@ -119,6 +121,7 @@ stdenv.mkDerivation (finalAttrs: {
     gsound
     gtk4
     ibus
+    libepoxy
     libgtop
     libgudev
     libadwaita
@@ -130,6 +133,7 @@ stdenv.mkDerivation (finalAttrs: {
     libsecret
     libsoup_3
     libwacom
+    libXi
     libxml2
     modemmanager
     mutter # schemas for the keybindings
@@ -147,6 +151,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]);
 
   nativeCheckInputs = [
+    dbus
     python3.pkgs.python-dbusmock
     setxkbmap
     xvfb-run
